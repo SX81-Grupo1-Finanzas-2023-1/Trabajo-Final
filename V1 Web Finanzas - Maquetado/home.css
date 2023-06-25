@@ -1,0 +1,33 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.home-container {
+    background-color: #E0E0E0;
+    height: 98vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    gap: 2vw; 
+    font-family: Montserrat;
+}
+
+#home_logo {
+   width: 35%;
+}
+
+#home_bt {
+    background-color: #88BC24;
+    color: #fff;
+    border: none;
+    border-radius: 1.5vw;
+    text-decoration: none;
+    box-shadow: none;
+    padding: 1.4vw 3vw;
+    font-size: 1.9vw;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+ 
+}

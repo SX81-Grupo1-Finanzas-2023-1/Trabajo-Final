@@ -1,0 +1,67 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.home-container {
+    background-color: #E0E0E0;
+}
+
+
+#navbar {
+    background-color: #C0C0C0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#navbar-top {
+    background-color:C0C0C0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #C0C0C0;
+}
+
+#navbar-top #retroceso_bt img {
+    width: 15%;
+    margin: 0 0 0 1rem;
+}
+
+
+#navbar-top #logo {
+    width: 13%;
+}
+
+#navbar-top h1 {
+    width: 5rem;
+}
+
+
+#navbar-bottom {
+    background-color: #C9C9C9;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 1.8vw;
+}
+
+
+#navbar-bottom a {
+    font-size: 1.2vw;
+    margin: 0 10px;
+    color: #a19c9b;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+#navbar-bottom a:hover {
+    color: #736f6e;
+    transition: 0.1s;
+    
+}
