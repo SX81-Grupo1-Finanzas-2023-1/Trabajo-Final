@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="simPaso6.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+<body>
+    
+
+    <div class="simPaso6">
+        <div class="simPaso6-container">
+            <nav id="navbar">
+                <div id="navbar-top">
+                    <a href="simPaso5.html" id="retroceso_bt">
+                        <img src="img/retroceso_blanco_bt.png" alt="Botón de Retroceso">
+                    </a>
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <h1>.</h1>
+                </div>
+                <div id="navbar-bottom">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="simulacion.html">Nueva Solicitud de Simulación de Crédito</a>
+                    <a href="historial.html">Historial de Solicitudes de Crédito</a>
+                </div>
+            </nav>
+
+
+            <div id="espacio_je">-</div>
+
+            <div id="contenido">
+                <div id="contenido-container" class="center-container">
+                    <div id="texto">
+                        <h1>Ingrese el Tiempo del Préstamo</h1>
+                        <h3>Ingrese en cuánto tiempo planea devolver el préstamo
+                        </h3>
+                    </div>
+
+                    <div id="ingreso-tiempoprestamo">
+
+                        <div class="tiempoprestamo-container">
+                            <div class="input-container">
+                                <input type="number" class="number-input" placeholder="Ingrese un número" min="0">
+                            </div>
+        
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" id="dropdownToggle">
+                                  Dias                          
+                                </button>
+                                <ul class="dropdown-menu" id="dropdownMenu">
+                                  <li>Dias</li>
+                                  <li>Meses</li>
+                                  <li>Años</li>
+                                  <li>Nada</li>
+                                </ul>
+                            </div>                   
+         
+                        </div>               
+                    
+                    </div>
+
+                    <div id="continuar_bt_container">
+                        <a href="simResultados.html" id="continuar_bt">
+                            <button id="boton">Continuar</button>
+                        </a>                        
+                    </div>   
+
+
+                </div>
+            </div> 
+           
+
+           
+
+          
+           
+        </div>
+    </div>
+
+
+
+    <script>
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+
+        dropdownToggle.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('show');
+        dropdownIcon.classList.toggle('rotate');
+        });
+
+        dropdownMenu.addEventListener('click', function (event) {
+        if (event.target.tagName === 'LI') {
+            dropdownToggle.textContent = event.target.textContent;
+            dropdownMenu.classList.remove('show');
+            dropdownIcon.classList.remove('rotate');
+        }
+        });
+    </script>
+
+
+</body>
+</html>
