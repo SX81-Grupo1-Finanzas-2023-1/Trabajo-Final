@@ -1,0 +1,171 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.home-container {
+    background-color: #E0E0E0;
+}
+
+
+#navbar {
+    background-color: #C0C0C0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#navbar-top {
+    background-color:C0C0C0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #C0C0C0;
+}
+
+#navbar-top #retroceso_bt img {
+    width: 15%;
+    margin: 0 0 0 1rem;
+}
+
+
+#navbar-top #logo {
+    width: 13%;
+}
+
+#navbar-top h1 {
+    width: 5rem;
+}
+
+
+#navbar-bottom {
+    background-color: #C9C9C9;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 1.8vw;
+}
+
+
+#navbar-bottom a {
+    font-size: 1.2vw;
+    margin: 0 10px;
+    color: #a19c9b;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+#navbar-bottom a:hover {
+    color: #736f6e;
+    transition: 0.1s;
+    
+}
+
+
+/*container general------------------*/
+
+
+#espacio_je {
+    color: #FFFFFF;
+    font-size: 4vw;
+}
+
+#contenido-container {
+    margin: 0rem 10rem;
+}
+
+
+
+
+/*Texto titulos---------------------*/
+#contenido-container {
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    height: 100vh;
+}
+
+
+
+
+
+/*BOTONESSSSSSSS*/
+  
+#boton{
+    background-color: #808479;
+    border-radius: 8px;
+    padding: 1.2rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.2vw;    
+    cursor: pointer;  
+    color: white;   
+    border:none;
+    
+}
+
+#boton:hover {
+    background-color: #7DAD1F;
+    transition: 0.1s;
+}
+
+#boton:focus {
+    background-color: #7DAD1F;    
+}
+
+#continuar_bt_container  {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/*-------TABLA-------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  th,
+  td {
+    border: 1px solid #88BC24;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #C4DE92;
+    text-align: center;
+  }
+  
+  tr:nth-child(2),
+  tr:nth-child(4),
+  tr:nth-child(6),
+  tr:last-child {
+    background-color: #C4DE92;
+  }
+  
+  tr:nth-child(2n+1):not(:nth-child(2n+7)),
+  tr:nth-child(2n+3):not(:nth-child(2n+7)),
+  tr:nth-child(2n+5):not(:nth-child(2n+7)) {
+    background-color: #FFFFFF;
+  }
+  
+
+

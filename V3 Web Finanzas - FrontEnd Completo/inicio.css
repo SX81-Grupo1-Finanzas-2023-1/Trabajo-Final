@@ -1,0 +1,277 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.home-container {
+    background-color: #E0E0E0;
+}
+
+
+#navbar {
+    background-color: #C0C0C0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#navbar-top {
+    background-color:C0C0C0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #C0C0C0;
+}
+
+#navbar-top #retroceso_bt img {
+    width: 15%;
+    margin: 0 0 0 1rem;
+}
+
+
+#navbar-top #logo {
+    width: 13%;
+}
+
+#navbar-top h1 {
+    width: 5rem;
+}
+
+
+#navbar-bottom {
+    background-color: #C9C9C9;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 1.8vw;
+}
+
+
+#navbar-bottom a {
+    font-size: 1.2vw;
+    margin: 0 10px;
+    color: #a19c9b;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+#navbar-bottom a:hover {
+    color: #736f6e;
+    transition: 0.1s;
+    
+}
+
+#espacio_je {
+    color: #FFFFFF;
+    font-size: 12vw;
+}
+
+
+
+/*nuevo*/
+/* Margen izquierdo y derecho para todo el contenido dentro de .inicio-container */
+
+
+.inicio-container {
+    margin: 0 6rem;
+  }
+  
+  /* Separación entre el título y el subtítulo en #bienvenida */
+  #bienvenida h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos para #muestra-casas-container y #hogar-ideal-container */
+  #muestra-casas-container,
+  #hogar-ideal-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+
+/*NUEVOS Y FLAMEANTES BIENES INMUEBLES....................................................................*/
+
+  
+  #muestra-casas-container h1,
+  #muestra-casas-container h3,
+  #hogar-ideal-container h1,
+  #hogar-ideal-container h3 {
+    margin: 1rem 0;
+  }
+  
+  .casas-row {
+    display: flex;
+    justify-content: center;
+    gap: 8vw;
+  }
+
+  #muestra-casas-container img {
+    width: 20vw;
+  }
+
+  #hogar-ideal-container img {
+    width: 20vw;
+  }
+  
+  
+  /*OFERTA LOCURA....................................................................*/
+
+  #oferta-locura-container {
+    background-color: #88BC24;
+    border: 1px solid #7DAD1F;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex; 
+  }
+  
+  .columna-izq {
+    flex: 1; 
+  }
+    
+  #imagen-izq {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    
+  }
+
+  #imagen-izq img {
+    width: 25vw;
+  }
+
+
+  .columna-der {
+    flex: 2; 
+    
+  }
+
+  #texto-der {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+  }
+  
+
+  #titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }  
+
+  
+  #titulo h1 {
+    margin: 0;
+    font-size: 3.5VW;
+  }
+
+  #titulo img {
+    width: 3rem; 
+  }
+
+
+  #parrafo-locura {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.5vw;
+  }
+  
+  
+
+
+
+  
+  
+  /*FOOTER....................................................................*/
+  .footer-container {
+    margin-top: 3rem;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+
+
+  footer {
+    margin: 0;
+    background-color: #7DAD1F;
+    color: whitesmoke;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }  
+
+  
+  footer h1,
+  footer h4,
+  footer h3,
+  footer p {
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+  }
+  
+
+/*BOTONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+#inicio_bt{
+  background-color: #7DAD1F;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  color: white;   
+  text-decoration: none; 
+  /*
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  */
+}
+
+#inicio_bt:hover {
+  background-color: #699218;
+  transition: 0.1s;
+}
+
+#inicio_bt:focus {
+  background-color: #7DAD1F;    
+}
+
+#inicio_bt  {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: white;   
+  font-size: 1.2vw;    
+}
+
+/*
+ <a href="simulacion.html" id="inicio_bt">
+    <button id="boton">¡Calcula tu Crédito Ahora!</button>                                   
+ </a>  
+*/
+
+
+
+ 
+  
+

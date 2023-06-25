@@ -1,0 +1,89 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.signin-container {
+    background-color: #E0E0E0;
+    height: 87vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    gap: 0.5vw; 
+    font-family: Montserrat;
+    
+}
+
+
+#retroceso_bt img{
+    width: 1.2%;
+    margin: 2vw 0vw 0vw 2vw;
+}
+
+#logo {
+   width: 25%;
+}
+
+#signin-form {
+    width: 50%; 
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+#columna-izquierda,
+#columna-derecha {
+    flex: 1; /* Permite que las columnas se expandan para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grupos-form {
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-bottom: 0.8rem; 
+}
+
+
+#signin-form #texto {
+    font-size: 1vw;
+    margin-top: 1rem; 
+    color: red;
+}
+
+#signin-form #input, #input-dni, #input-correo, #input-contrasena, #input-repita-contrasena, #input-usuario {
+    width: 95%;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    padding: 1rem 0.8rem; 
+}
+
+
+
+#signin_bt {
+    background-color: #88BC24;
+    color: #fff;
+    border: none;
+    border-radius: 1.5vw;
+    text-decoration: none;
+    box-shadow: none;
+    padding: 1.4vw 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+}
+
+#signin_bt.disabled {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+
+/**/
+
+

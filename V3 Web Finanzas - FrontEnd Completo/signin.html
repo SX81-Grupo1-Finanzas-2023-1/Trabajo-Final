@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="signin.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+
+<body>
+    <header>
+        <a href="login.html" id="retroceso_bt">
+            <img src="img/retroceso_bt.png" alt="Botón de Retroceso">
+        </a>
+    </header>
+    
+    <div class="signin-container">
+        <img src="img/logo.png" alt="logo" id="logo">
+
+        <form id="signin-form">
+
+            <div id="columna-izquierda">
+                <div id="grupos-form">
+                    <label id="texto" for="input">Primer Nombre</label>
+                    <input id="input" type="text" name="username" placeholder="Ingrese">
+                </div>
+                  
+                <div id="grupos-form">
+                    <label id="texto" for="input">Primer Apellido</label>
+                    <input id="input" type="text" name="username" placeholder="Ingrese">
+                </div>
+                <div id="grupos-form">
+                    <label id="texto" for="input-dni">DNI</label>
+                    <input id="input-dni" type="text" name="dni" placeholder="Ingrese">
+                </div>
+                
+                <div id="grupos-form">
+                    <label id="texto" for="input-contrasena">Contraseña</label>
+                    <input id="input-contrasena" type="password" name="username" placeholder="Ingrese">
+                </div>
+            </div>
+
+            <div id="columna-derecha">
+                <div id="grupos-form">
+                    <label id="texto" for="input-usuario">Usuario</label>
+                    <input id="input-usuario" type="text" name="username" placeholder="Ingrese">
+                </div>
+                  
+                <div id="grupos-form">
+                    <label id="texto" for="input">Segundo Apellido</label>
+                    <input id="input" type="text" name="username" placeholder="Ingrese">
+                </div>
+                <div id="grupos-form">
+                    <label id="texto" for="input-correo">Correo Electrónico</label>
+                    <input id="input-correo" type="text" name="correo" placeholder="Ingrese">
+                  </div>
+                <div id="grupos-form">
+                    <label id="texto" for="input-repita-contrasena">Repita Contraseña</label>
+                    <input id="input-repita-contrasena" type="password" name="username" placeholder="Ingrese">
+                </div>
+            </div>
+
+           
+              
+
+        </form>
+
+        <button id="signin_bt" class="disabled" disabled>Registrarse</button>
+
+
+    </div>
+
+    <script>
+        // Para recoger los elementos del form y el continuar btttt
+        const form = document.getElementById('signin-form');
+        const inputs = form.querySelectorAll('input');
+        const continueBtn = document.getElementById('signin_bt');
+    
+        //Evento de escucha en cuadradito de entrada (los inputs pe)
+        inputs.forEach((input) => {
+            input.addEventListener('input', validateForm);
+        });
+    
+        // Valida el formulario en tiempo real
+        function validateForm() {
+            let isFormValid = true;
+            let isDNIValid = true;
+            let isEmailValid = true;
+            let isPasswordMatch = true;
+
+
+            // Verifica si algún campo está vacío o no cumple con la validación
+            inputs.forEach((input) => {
+                if (!input.value.trim()) {
+                isFormValid = false;
+                }
+
+                if (input.id === 'input-dni' && !validateDNI(input.value.trim())) {
+                isFormValid = false;
+                isDNIValid = false;
+                }
+
+                if (input.id === 'input-correo' && !validateEmail(input.value.trim())) {
+                isFormValid = false;
+                isEmailValid = false;
+                }
+
+                if (input.id === 'input-repita-contrasena') {
+                const passwordInput = document.getElementById('input-contrasena');
+                if (input.value !== passwordInput.value) {
+                    isFormValid = false;
+                    isPasswordMatch = false;
+                }
+                }
+            });
+
+             // Actualiza el color del texto según las condiciones
+            inputs.forEach((input) => {
+                const label = input.previousElementSibling;
+                if (input.value.trim() === '') {
+                label.style.color = 'red';
+                } else if (input.id === 'input-dni' && !isDNIValid) {
+                label.style.color = 'red';
+                } else if (input.id === 'input-correo' && !isEmailValid) {
+                label.style.color = 'red';
+                } else if (input.id === 'input-repita-contrasena' && !isPasswordMatch) {
+                label.style.color = 'red';
+                } else {
+                label.style.color = 'gray';
+                }
+            });
+                        
+
+           // Activa o desactiva el botón de continuar según la validez del formulario
+            if (isFormValid) {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+                continueBtn.addEventListener('click', redirectToInicio);
+            } else {
+                continueBtn.classList.add('disabled');
+                continueBtn.setAttribute('disabled', 'true');
+                continueBtn.removeEventListener('click', redirectToInicio);
+            }
+        }
+
+        // Valida el formato del DNI (8 dígitos)
+        function validateDNI(value) {
+            const dniRegex = /^\d{8}$/;
+            return dniRegex.test(value);
+        }
+
+        function validateEmail(value) {
+            const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return emailRegex.test(value);
+        }
+
+        
+        // Nos manda al inicio.html
+        function redirectToInicio() {
+            window.location.href = 'login.html';
+        }
+
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="login.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+
+<body>
+    <header>
+        <a href="home.html" id="retroceso_bt">
+            <img src="img/retroceso_bt.png" alt="Botón de Retroceso">
+        </a>
+    </header>
+    
+    <div class="login-container">
+        <img src="img/logo.png" alt="logo" id="login-logo">
+
+        <form id="login-form">
+
+            <div id="grupos-form">
+                <label id="texto" for="input">Usuario</label>
+                <input id="input" type="text" name="username" placeholder="Ingrese su usuario">
+            </div>
+              
+            <div id="grupos-form">
+                <label id="texto" for="input">Contraseña</label>
+                <input id="input" type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+            </div>
+              
+
+          <div id="signup-link">
+            <a href="signin.html">¿No tienes una cuenta? Registrate aquí</a>
+          </div>
+
+        </form>
+
+        <button id="login_bt" class="disabled" disabled>Iniciar Sesión</button>
+    </div>
+
+    <script>
+        // Para recoger los elementos del form y el continuar btttt
+        const form = document.getElementById('login-form');
+        const inputs = form.querySelectorAll('input');
+        const continueBtn = document.getElementById('login_bt');
+      
+        //Evento de escucha en cuadradito de entrada (los inputs pe)
+        inputs.forEach((input) => {
+          input.addEventListener('input', validateForm);
+        });
+      
+        // Valida el formulario en tiempo real
+        function validateForm() {
+            let isFormValid = true;
+        
+            // Verifica si algún campo está vacío
+            inputs.forEach((input) => {
+            if (!input.value.trim()) {
+                isFormValid = false;
+                }
+            });
+        
+            // Activa o desactiva el botón de continuar según la validez del formulario
+            if (isFormValid) {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+                continueBtn.addEventListener('click', redirectToInicio);
+            } else {
+                continueBtn.classList.add('disabled');
+                continueBtn.setAttribute('disabled', 'true');
+                continueBtn.removeEventListener('click', redirectToInicio);
+            }
+        }
+      
+        // Nos manda al inicio.html
+        function redirectToInicio() {
+          window.location.href = 'inicio.html';
+        }
+    </script>
+      
+      
+
+
+</body>
+</html>
