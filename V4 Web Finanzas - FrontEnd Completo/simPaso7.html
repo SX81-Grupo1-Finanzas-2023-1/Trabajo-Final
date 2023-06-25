@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="simPaso7.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+<body>
+
+    <div class="simPaso7">
+        <div class="simPaso7-container">
+            <nav id="navbar">
+                <div id="navbar-top">
+                    <a href="simPaso6.html" id="retroceso_bt">
+                        <img src="img/retroceso_blanco_bt.png" alt="Botón de Retroceso">
+                    </a>
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <h1>.</h1>
+                </div>
+                <div id="navbar-bottom">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="simulacion.html">Nueva Solicitud de Simulación de Crédito</a>
+                    <a href="historial.html">Historial de Solicitudes de Crédito</a>
+                </div>
+            </nav>
+
+
+           <div id="espacio_je">-</div>
+
+            <div id="contenido">
+                <div id="contenido-container" class="center-container">
+                    <div id="texto">
+                        <h1>Seleccione el Periodo de Tasa de Interés</h1>
+                        <h3>Elija el periodo de la tasa de interés. Por ejemplo, si la tasa de referencia que tiene es TNA o TEA, elija ANUAL. Para obtener más información sobre los 
+                            tipos de tasas de interés según su periodo, busque en google.
+                        </h3>
+                    </div>
+
+                    <div id="opciones-periodo">                     
+                        <div id="fila-arriba">
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Diaria</button>                               
+                            </a>                
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Quincenal</button>                               
+                            </a>   
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Mensual</button>                               
+                            </a>   
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Bimestral</button>                               
+                            </a> 
+                        </div>
+        
+                        <div id="fila-abajo">
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Trimestral</button>                               
+                            </a>                
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Cuatrimestral</button>                               
+                            </a>   
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Semestral</button>                               
+                            </a>   
+                            <a href="#" onclick="selectOption(this)">
+                                <button class="boton">Anual</button>                               
+                            </a> 
+                        </div>                                        
+                        
+                    </div>          
+        
+                   
+                    <div id="continuar_bt_container">
+                        <a href="simPaso8.html" id="continuar_bt">
+                            <button class="boton" disabled>Continuar</button>
+                        </a>                        
+                    </div>    
+                </div>                
+
+            </div>           
+           
+        </div>
+    </div>
+    
+    <script>
+        function selectOption(element) {
+             // Remove the 'selected' class from all option buttons
+             var optionButtons = document.querySelectorAll("#opciones-periodo a");
+             optionButtons.forEach(function(button) {
+                 button.classList.remove("selected");
+             });
+ 
+             // Add the 'selected' class to the clicked option button
+             element.classList.add("selected");
+ 
+             // Enable or disable the 'Continuar' button based on the selected option
+             var continuarButton = document.getElementById("continuar_bt");
+             var continuarButtonDisabled = !document.querySelector("#opciones-periodo a.selected");
+             continuarButton.querySelector("button").disabled = continuarButtonDisabled;
+         }
+     </script>
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="simPaso4.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+<body>
+    
+    <div class="simPaso4">
+        <div class="simPaso4-container">
+            <nav id="navbar">
+                <div id="navbar-top">
+                    <a href="simPaso3.html" id="retroceso_bt">
+                        <img src="img/retroceso_blanco_bt.png" alt="Botón de Retroceso">
+                    </a>
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <h1>.</h1>
+                </div>
+                <div id="navbar-bottom">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="simulacion.html">Nueva Solicitud de Simulación de Crédito</a>
+                    <a href="historial.html">Historial de Solicitudes de Crédito</a>
+                </div>
+            </nav>
+
+            <div id="espacio_je">-</div>
+
+            <div id="contenido">
+                <div id="contenido-container" class="center-container">
+                    <div id="texto">
+                        <h1>Ingrese la Cuota Inicial que Pagará</h1>
+                        <h3>Ingrese la cuota inicial que está dispuesto a pagar por su vivienda</h3>
+                    </div>
+
+                    <div id="ingreso-porcentaje">
+
+                        <div class="porcentaje-container">
+                            <input type="number" class="porcentaje-input" min="1" max="100" placeholder="Ingrese el monto">
+                            <span class="porcentaje-symbol">$</span>
+                        </div>   
+                        
+                        <div id="continuar_bt_container">
+                            <a href="simPaso5.html" id="continuar_bt">
+                                <button id="boton" disabled>Continuar</button>
+                            </a>                        
+                        </div>    
+                          
+                      
+                      
+                    </div>
+
+
+                </div>
+            </div>         
+           
+        </div>
+    </div>
+
+    <script>
+        const porcentajeInput = document.querySelector('.porcentaje-input');
+        const continuarButton = document.querySelector('#continuar_bt button');
+
+        porcentajeInput.addEventListener('input', function() {
+            continuarButton.disabled = !porcentajeInput.value;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Fondo MiVivienda</title>
+    <link rel="stylesheet" href="simPaso6.css"> 
+    <link rel="shortcut icon" href="img/icon.png">  
+</head>
+<body>
+    
+    <div class="simPaso6">
+        <div class="simPaso6-container">
+            <nav id="navbar">
+                <div id="navbar-top">
+                    <a href="simPaso5.html" id="retroceso_bt">
+                        <img src="img/retroceso_blanco_bt.png" alt="Botón de Retroceso">
+                    </a>
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <h1>.</h1>
+                </div>
+                <div id="navbar-bottom">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="simulacion.html">Nueva Solicitud de Simulación de Crédito</a>
+                    <a href="historial.html">Historial de Solicitudes de Crédito</a>
+                </div>
+            </nav>
+
+
+            <div id="espacio_je">-</div>
+
+
+            <div id="contenido">
+                <div id="contenido-container" class="center-container">
+                    <div id="texto">
+                        <h1>Seleccione el tipo de tasa de interés</h1>
+                        <h3>Elija calcular el prestamo usando una tasa nominal o efectiva</h3>
+                    </div>
+        
+                    <div id="opciones-tasa">                     
+                    
+                        <a href="#" id="opcion_bt" onclick="selectOption(this)">
+                            <button id="boton">
+                                <h2>Tasa Nominal</h2>
+                                <p>S=C*(1+i/m)^n</p>
+                            </button>                               
+                        </a>                
+
+                        <a href="#" id="opcion_bt" onclick="selectOption(this)">
+                            <button id="boton">
+                                <h2>Tasa Efectiva</h2>
+                                <p>S=C*(1+i)^(n/m)</p>
+                            </button>
+                               
+                        </a>                       
+                        
+                    </div>     
+                     
+
+                    <div id="continuar_bt_container">
+                        <a href="simPaso7.html" id="continuar_bt">
+                            <button id="boton" disabled>Continuar</button>
+                        </a>                        
+                    </div>
+            
+                       
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+       function selectOption(element) {
+            // Remove the 'selected' class from all option buttons
+            var optionButtons = document.querySelectorAll("#opciones-tasa a");
+            optionButtons.forEach(function(button) {
+                button.classList.remove("selected");
+            });
+
+            // Add the 'selected' class to the clicked option button
+            element.classList.add("selected");
+
+            // Enable or disable the 'Continuar' button based on the selected option
+            var continuarButton = document.getElementById("continuar_bt");
+            var continuarButtonDisabled = !document.querySelector("#opciones-tasa a.selected");
+            continuarButton.querySelector("button").disabled = continuarButtonDisabled;
+        }
+    </script>
+
+
+
+
+</body>
+</html>
